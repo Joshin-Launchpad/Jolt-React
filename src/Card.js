@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './Card.css';
+import $ from 'jquery';
 
 class Card extends Component {
   render() {
-
-
+  const url = `http://localhost:3008/people`;
+    $.ajax({
+      url: url
+    }).done(function(data) {
+    console.log('The returned object is:', data)
+    })
 
     return (
       <div className='card'>
@@ -18,7 +23,7 @@ class Card extends Component {
             <p>
                 {/* Note that in order to get the homeworld's name, you have to get the planet name from a different endpoint than the people */}
                 <span>Homeworld:</span>
-                <span homeworld={""}>Tatooine</span>
+                <span homePlanet={""}>Tatooine</span>
             </p>
         </div>
     </div>
