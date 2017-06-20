@@ -12,9 +12,22 @@
     "react-dom": "^15.4.1"
   },
   "scripts": {
-    "start": "./node_modules/.bin/concurrently \"cd ./node_modules/swapi-json-server && node app.js\" \"react-scripts start\"",
+    "start": "concurrently \"cd ./node_modules/swapi-json-server && node app.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "review": "atom . && npm install && npm start"
+  },
+  "description": "We welcome you and thank you for taking the time to do this coding assessment. Please read the guidelines before getting started.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joshin-Launchpad/Jolt-React.git"
+  },
+  "author": "Josh Holladay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joshin-Launchpad/Jolt-React/issues"
+  },
+  "homepage": "https://github.com/Joshin-Launchpad/Jolt-React#readme"
 }
